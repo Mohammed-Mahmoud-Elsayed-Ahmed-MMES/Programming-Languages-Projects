@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1652661303 source:d:\c++ programs\lcm\main.cpp
+	<iostream>
+
+1652661482 source:d:\c++ programs\dm tasks\gcd,lcm\main.cpp
+	<iostream>
+

@@ -1,0 +1,170 @@
+# depslib dependency file v1.0
+1650814181 source:d:\c++ programs\assignment\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+
+1650815126 source:d:\c++ programs\assignment\src\customer.cpp
+	"Customer.h"
+
+1650814181 d:\c++ programs\assignment\include\customer.h
+	<iostream>
+	<string>
+	<cstring>
+
+1650816624 source:d:\c++ programs\assignment\src\person.cpp
+	"Person.h"
+
+1650816263 d:\c++ programs\assignment\include\person.h
+	"Customer.h"
+	<iostream>
+	<string>
+	<cstring>
+
+1654807752 source:d:\c++ programs\assignment 3\main.cpp
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<cstring>
+	<bits/stdc++.h>
+	<windows.h>
+	<fstream>
+	"Customers.h"
+	"Product.h"
+	"Stock.h"
+	"Order.h"
+	"Transaction.h"
+	"Payment.h"
+
+1653139171 source:d:\c++ programs\assignment 3\src\company.cpp
+	"Company.h"
+
+1653137875 d:\c++ programs\assignment 3\include\company.h
+	"Customer.h"
+	<iostream>
+	<string>
+	<cstring>
+
+1653738772 d:\c++ programs\assignment 3\include\customer.h
+	<iostream>
+	<string>
+	<cstring>
+	<cstdlib>
+
+1654351750 source:d:\c++ programs\assignment 3\src\customer.cpp
+	"Customer.h"
+
+1653139099 source:d:\c++ programs\assignment 3\src\person.cpp
+	"Person.h"
+
+1653137875 d:\c++ programs\assignment 3\include\person.h
+	"Customer.h"
+	<iostream>
+	<string>
+	<cstring>
+
+1654371544 source:d:\c++ programs\assignment 3\src\order.cpp
+	"Order.h"
+
+1654350904 d:\c++ programs\assignment 3\include\order.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+	"OrderStatus.h"
+	"orderItem.h"
+	"Customer.h"
+
+1654806389 source:d:\c++ programs\assignment 3\src\customers.cpp
+	"Customers.h"
+
+1654364206 d:\c++ programs\assignment 3\include\customers.h
+	"Customer.h"
+	"Person.h"
+	"Company.h"
+
+1653641791 source:d:\c++ programs\assignment 3\src\credit.cpp
+	"Credit.h"
+
+1653641757 d:\c++ programs\assignment 3\include\credit.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+
+1654277750 source:d:\c++ programs\assignment 3\src\cash.cpp
+	"Cash.h"
+
+1653642160 d:\c++ programs\assignment 3\include\cash.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+
+1653642881 source:d:\c++ programs\assignment 3\src\check.cpp
+	"Check.h"
+
+1653642959 d:\c++ programs\assignment 3\include\check.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+
+1654348322 source:d:\c++ programs\assignment 3\src\payment.cpp
+	"Payment.h"
+
+1654344402 d:\c++ programs\assignment 3\include\payment.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+	"Credit.h"
+	"Cash.h"
+	"Check.h"
+
+1654344197 source:d:\c++ programs\assignment 3\src\transaction.cpp
+	"Transaction.h"
+
+1654279889 d:\c++ programs\assignment 3\include\transaction.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+	"Payment.h"
+	"Order.h"
+
+1654351750 source:d:\c++ programs\assignment 3\src\product.cpp
+	"Product.h"
+
+1654279801 d:\c++ programs\assignment 3\include\product.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+
+1654255595 source:d:\c++ programs\assignment 3\src\orderitem.cpp
+	"orderItem.h"
+
+1654349961 d:\c++ programs\assignment 3\include\orderitem.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+	"Stock.h"
+	"Product.h"
+
+1654362249 d:\c++ programs\assignment 3\include\stock.h
+	<iostream>
+	<string>
+	<cstring>
+	<ctime>
+	<Product.h>
+
+1654805655 source:d:\c++ programs\assignment 3\src\stock.cpp
+	"Stock.h"
+
+1654198747 d:\c++ programs\assignment 3\include\orderstatus.h
+
+1654198594 source:d:\c++ programs\assignment 3\src\orderstatus.cpp
+	"OrderStatus.h"
+

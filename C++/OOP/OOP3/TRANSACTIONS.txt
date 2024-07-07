@@ -1,0 +1,18 @@
+Order ID : 2
+Order Number : 30
+Order Date : 32
+Order Status : NEW
+Order Total : 24000
+	Order Item : 
+Product ID : 2
+Product Name : LAPTOP
+Product Number : 85
+Product Price : 24000.000000
+Product Type : 1511
+Sale Price : 25000.000000
+Quantity : 3.000000
+
+Transaction Date is : 20
+Paid Date : 21
+
+

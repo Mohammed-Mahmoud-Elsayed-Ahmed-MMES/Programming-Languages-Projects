@@ -1,0 +1,12 @@
+Product ID : 1
+Product Name : MOUSE
+Product Number : 85
+Product Price : 100
+Product Type : 23
+
+Product ID : 2
+Product Name : LAPTOP
+Product Number : 85
+Product Price : 24000
+Product Type : 1511
+

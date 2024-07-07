@@ -1,0 +1,1177 @@
+
+#include <iostream>
+using namespace std;
+class LinkedList
+{
+private:
+    struct Node
+    {
+        int item;
+        Node *next;
+    };
+    Node *right,*lift;
+    int length;
+public:
+    LinkedList()
+    {
+        length=0;
+        right=lift=NULL;
+    }
+    void insertRight(int element)//30
+    {
+        Node *newNode=new Node;
+        newNode->item=element;//50
+        if(length==0)
+        {
+            newNode->next=NULL;
+            right=lift=newNode;
+        }
+        else
+        {
+            right->next=newNode;
+            right=newNode;
+            newNode->next=NULL;
+        }
+        length++;
+    }
+
+    void insertLift(int element)//30
+    {
+        Node *newNode=new Node;
+        newNode->item=element;//50
+        if(length==0)
+        {
+            newNode->next=NULL;
+            right=lift=newNode;
+        }
+        else
+        {
+            newNode->next=lift;
+            lift=newNode;
+        }
+        length++;
+    }
+    void insertAtPosition(int position,int element)//100
+    {
+        Node *newNode=new Node;
+        newNode->item=element;//50
+        if(position<0 ||position>length)
+        {
+            cout<<"Error::Out Of Range"<<endl;
+        }
+        else
+        {
+            if(position==0)
+            {
+                insertLift(element);
+            }
+            else if(position==length)
+            {
+                insertRight(element);
+            }
+            else
+            {
+                Node *current=lift;
+                for(int i=1; i<position; i++)
+                {
+                    current=current->next;
+                }
+                newNode->next=current->next;
+                current->next=newNode;
+                length++;
+            }
+        }
+
+    }
+    void size()
+    {
+        cout<<length<<endl;
+    }
+    void printLift()
+    {
+        Node *current=lift;
+        while(current!=NULL)
+        {
+            cout<<current->item<<" ";
+            current=current->next;
+        }
+    }
+};
+int main()
+{
+    LinkedList LinkedList;
+    LinkedList.insertRight(30);//0   30 40 50 100 60 70
+    LinkedList.insertRight(40);//1
+    LinkedList.insertRight(50);//2
+    LinkedList.insertRight(60);//3
+    LinkedList.insertRight(70);//4
+     LinkedList.insertAtPosition(-1,100);
+    LinkedList.printLift();
+    return 0;
+}
+------------------------------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+class LinkedList
+{
+private:
+    struct Node
+    {
+        int item;
+        Node *next;
+    };
+    Node *right,*lift;
+    int length;
+public:
+    LinkedList()
+    {
+        length=0;
+        right=lift=NULL;
+    }
+    void insertRight(int element)//30
+    {
+        Node *newNode=new Node;
+        newNode->item=element;//50
+        if(length==0)
+        {
+            newNode->next=NULL;
+            right=lift=newNode;
+        }
+        else
+        {
+            right->next=newNode;
+            right=newNode;
+            newNode->next=NULL;
+        }
+        length++;
+    }
+
+    void insertLift(int element)//30
+    {
+        Node *newNode=new Node;
+        newNode->item=element;//50
+        if(length==0)
+        {
+            newNode->next=NULL;
+            right=lift=newNode;
+        }
+        else
+        {
+            newNode->next=lift;
+            lift=newNode;
+        }
+        length++;
+    }
+    void insertAtPosition(int position,int element)//100
+    {
+        Node *newNode=new Node;
+        newNode->item=element;//50
+        if(position<0 ||position>length)
+        {
+            cout<<"Error::Out Of Range"<<endl;
+        }
+        else
+        {
+            if(position==0)
+            {
+                insertLift(element);
+            }
+            else if(position==length)
+            {
+                insertRight(element);
+            }
+            else
+            {
+                Node *current=lift;
+                for(int i=1; i<position; i++)
+                {
+                    current=current->next;
+                }
+                newNode->next=current->next;
+                current->next=newNode;
+                length++;
+            }
+        }
+
+    }
+    void size()
+    {
+        cout<<length<<endl;
+    }
+    void printLift()
+    {
+        Node *current=lift;
+        while(current!=NULL)
+        {
+            cout<<current->item<<" ";
+            current=current->next;
+        }
+    }
+    void removeLift()
+    {
+        if(length==0)
+        {
+            cout<<"Linked List is Empty Can`t Remove Elements"<<endl;
+        }
+        else if(length==1)
+        {
+            lift->next=right->next=NULL;
+            delete lift;
+            delete right;
+        }
+        else
+        {
+            Node *current=lift;
+            lift=lift->next;
+            current->next=NULL;
+            delete current;
+        }
+        length--;
+    }
+    void removeRight()
+    {
+        if(length==0)
+        {
+            cout<<"Linked List is Empty Can`t Remove Elements"<<endl;
+        }
+        else if(length==1)
+        {
+            lift->next=right->next=NULL;
+            delete lift;
+            delete right;
+        }
+        else
+        {
+            Node *current = lift;
+            while (current->next != right)
+            {
+                current = current->next;
+            }
+            delete right;
+            current->next = NULL;
+            right = current;
+            length--;
+        }
+    }
+    void removeAtPoition(int position)
+    {
+        if(position==0)
+        {
+            removeLift();
+        }
+        else if(position==length-1)
+        {
+            removeRight();
+        }
+        else
+        {
+            Node *prevese=lift;
+            Node *current=lift->next;
+            for(int i=1; i<position; i++)
+            {
+                prevese=current;
+                current=current->next;
+            }
+            prevese->next=current->next;
+            current->next=NULL;
+            delete current;
+            length--;
+        }
+    }
+    void insertCurculer(int element)//30
+    {
+        Node *newNode=new Node;
+        newNode->item=element;//50
+        if(length==0)
+        {
+            newNode->next=NULL;
+            right=lift=newNode;
+        }
+        else
+        {
+            right->next=newNode;
+            right=newNode;
+------------------------------------------------------------------------------------
+
+
+#include <iostream>
+
+using namespace std;
+class DoubleLinkedList
+{
+private:
+    struct Node
+    {
+        Node *prevese,*next;
+        int item;
+    };
+    int length;
+    Node *lift,*right;
+public:
+    DoubleLinkedList()
+    {
+        length=0;
+        lift=right=NULL;
+    }
+    void insertLift(int element)
+    {
+        Node *newNode=new Node;
+        newNode->item=element;
+        if(length==0)
+        {
+            newNode->prevese=newNode->next=NULL;
+            lift=right=newNode;
+        }
+        else
+        {
+            newNode->next=lift;
+            newNode->prevese=NULL;
+            lift->prevese=newNode;
+            lift=newNode;
+        }
+        length++;
+    }
+
+    void insertRight(int element)
+    {
+        Node *newNode=new Node;
+        newNode->item=element;
+        if(length==0)
+        {
+            newNode->prevese=newNode->next=NULL;
+            lift=right=newNode;
+        }
+        else
+        {
+            newNode->next=NULL;
+            newNode->prevese=right;
+            right->next=newNode;
+            right=newNode;
+        }
+        length++;
+    }
+
+    void insertAtPosition(int position,int element)
+    {
+        Node *newNode=new Node;
+        newNode->item=element;
+        if(position<0||position>length)
+        {
+            cout<<"Error::Out Of Range"<<endl;
+        }
+        if(position==0)
+        {
+            insertLift(element);
+        }
+        else if(position==length)
+        {
+            insertRight(element);
+        }
+        else
+        {
+            Node *current=lift;
+            for(int i=1; i<position; i++)
+            {
+                current=current->next;
+            }
+            newNode->prevese=current;
+            newNode->next=current->next;
+            current->next->prevese=newNode;
+            current->next=newNode;
+            length++;
+        }
+    }
+    void print_From_Lift_To_Right()
+    {
+        Node* temp = lift;
+        cout<<"[";
+        while (temp != NULL)
+        {
+            cout << temp->item << " ";
+            temp = temp->next;
+        }
+        cout<<"]"<<endl;
+    }
+};
+int main()
+{
+    DoubleLinkedList DoubleLinkedList;
+    DoubleLinkedList.insertRight(20);
+    DoubleLinkedList.insertRight(30);
+    DoubleLinkedList.insertRight(40);
+    DoubleLinkedList.insertRight(50);
+    DoubleLinkedList.insertRight(60);
+    DoubleLinkedList.insertRight(70);
+    DoubleLinkedList.insertAtPosition(4,100);
+    DoubleLinkedList.insertRight(200);
+    DoubleLinkedList.insertRight(300);
+    DoubleLinkedList.insertRight(400);
+    DoubleLinkedList.insertRight(500);
+    DoubleLinkedList.insertRight(600);
+    DoubleLinkedList.insertRight(700);
+    DoubleLinkedList.print_From_Lift_To_Right();
+    return 0;
+}
+------------------------------------------------------------
+==
+
+#include <iostream>
+using namespace std;
+template<class t>
+class DoubleLinkedList
+{
+private:
+    struct Node
+    {
+        t item;
+        Node *prevese;
+        Node *next;
+    };
+    int length;
+    Node *lift,*right;
+public:
+    DoubleLinkedList()
+    {
+        lift=right=NULL;
+        length=0;
+    }
+    void insertRight(t element)
+    {
+        Node *newNode=new Node;
+        newNode->item=element;
+        if(length==0)
+        {
+            newNode->prevese=newNode->next=NULL;
+            lift=right=newNode;
+        }
+        else
+        {
+            newNode->next=NULL;
+            newNode->prevese=right;
+            right->next=newNode;
+            right=newNode;
+        }
+        length++;
+    }
+    void insertLift(t element)
+    {
+        Node *newNode=new Node;
+        newNode->item=element;
+        if(length==0)
+        {
+            newNode->prevese=newNode->next=NULL;
+            lift=right=newNode;
+        }
+        else
+        {
+            newNode->next=lift;
+            newNode->prevese=NULL;
+            lift->prevese=newNode;
+            lift=newNode;
+        }
+        length++;
+    }
+    void insertAtPosition(int position,t element)
+    {
+        Node *newNode=new Node;
+        newNode->item=element;
+        if(position==0)
+        {
+            insertLift(element);
+        }
+        else if(position==length)
+        {
+            insertRight(element);
+        }
+        else
+        {
+            Node *current=lift;
+            for(int i=1; i<position; i++)
+            {
+                current=current->next;
+            }
+            newNode->prevese=current;
+            newNode->next=current->next;
+            current->next->prevese=newNode;
+            current->next=newNode;
+            length++;
+        }
+    }
+---------------------------------------------------
+==
+void deleteLift()
+    {
+        if(length==0)
+        {
+            cout<<"Linked List is Empty Can`t Remove Elements"<<endl;
+        }
+        else
+        {
+            Node *current=lift;
+            lift=lift->next;
+            lift->prevese=NULL;
+            current->next=current->prevese=NULL;
+            delete current;
+            length--;
+        }
+    }
+    void deleteRight()
+    {
+        if(length==0)
+        {
+            cout<<"Linked List is Empty Can`t Remove Elements"<<endl;
+        }
+        else
+        {
+            Node *current=right;
+            right=right->prevese;
+            right->next=NULL;
+            current->next=current->prevese=NULL;
+            delete current;
+            length--;
+        }
+    }
+    void deleteAtPosition(int position)
+    {
+        if(position<0||position>=length)
+        {
+            cout<<"ERROR::Out Of Range"<<endl;
+        }
+        else if(length==0)
+        {
+            cout<<"Linked List is Empty Can`t Remove Elements"<<endl;
+        }
+        else if(position==0)
+        {
+            deleteLift();
+        }
+        else if(position==length-1)
+        {
+            deleteRight();
+        }
+        else
+        {
+            Node *current=lift;
+            for(int i=0; i<position; i++)
+            {
+                current=current->next;
+            }
+            current->next->prevese=current->prevese;
+            current->prevese->next=current->next;
+            current->next=current->prevese=NULL;
+            delete current;
+            length--;
+        }
+    }
+    void size()
+    {
+        cout<<"The Size of Linked List is :"<<length<<endl;
+    }
+    void print_From_Lift_To_Right()
+    {
+        Node* temp = lift;
+        cout<<"[";
+        while (temp != NULL)
+        {
+            cout << temp->item;
+            if(temp->next!=NULL)
+            {
+                cout<<" , ";
+            }
+            temp = temp->next;
+        }
+        cout<<"]"<<endl;
+    }
+    void print_From_Right_To_Lift()
+    {
+        Node* temp = right;
+        cout<<"[";
+        while (temp != NULL)
+        {
+            cout << temp->item;
+            if(temp->prevese!=NULL)
+            {
+                cout<<" , ";
+            }
+            temp = temp->prevese;
+        }
+        cout<<"]"<<endl;
+    }
+};
+int main()
+{
+    DoubleLinkedList <string>DoubleLinkedList;//10 20 30 40 100 50 60 70 80
+    DoubleLinkedList.insertLift("karim");
+    DoubleLinkedList.insertLift("Ahmed");
+    DoubleLinkedList.insertLift("mustafa");
+    DoubleLinkedList.insertLift("mohammed");
+    DoubleLinkedList.insertLift("samy");
+    DoubleLinkedList.print_From_Right_To_Lift();
+    return 0;
+}
+---------------------------------------------------------------------------------
+==
+
+#include <iostream>
+using namespace std;
+const int MAX_SIZE=100;
+template<class t>
+class Stack
+{
+private:
+    t arr[MAX_SIZE];
+    int top;
+public:
+    Stack()
+    {
+        top=-1;
+    }
+    bool isEmpty()
+    {
+        return top==-1;
+    }
+    bool isFull()
+    {
+        return top==MAX_SIZE-1;
+    }
+    void push(t element)
+    {
+        if(isFull())
+        {
+            cout<<"Stack is Full can`t insert Elements "<<endl;
+        }
+        else
+        {
+            arr[++top]=element;
+        }
+    }
+    void pop()
+    {
+        if(isEmpty())
+        {
+            cout<<"Stack is Empty can`t Remove Elements "<<endl;
+        }
+        else
+        {
+            top--;
+        }
+    }
+    void getTop()
+    {
+        cout<<"The Top in position : "<<top<<" : And the value is "<<arr[top]<<endl;
+    }
+    void print()
+    {
+        cout<<"The items in Stack are "<<endl;
+        for(int i=top; i>=0; i--)
+        {
+            cout<<arr[i]<<endl;
+        }
+    }
+};
+int main()
+{
+
+    Stack <int>s;
+    s.push(15);
+    s.push(25);
+    s.push(35);
+    s.push(45);
+    s.pop();
+    s.getTop();
+    s.print();
+
+    return 0;
+}
+-----------------------------------------------
+==
+
+#include <iostream>
+using namespace std;
+template<class t>
+class Stack
+{
+private:
+    struct Node
+    {
+        t item;
+        Node *next;
+    };
+    Node *top;
+    int length;
+public:
+    Stack()
+    {
+        top=NULL;
+        length=0;
+    }
+    bool isEmpty()
+    {
+        return top==NULL;
+    }
+    void push(t element)
+    {
+        Node *newNode=new Node;
+        newNode->item=element;
+        newNode->next=top;
+        top=newNode;
+        length++;
+    }
+    void pop()
+    {
+        if(isEmpty())
+        {
+            cout<<"Stack is Empty can`t Remove Elements "<<endl;
+        }
+        else
+        {
+            Node *current=top;
+            top=top->next;
+            current->next=NULL;
+            delete current;
+            length--;
+        }
+    }
+    void getTop()
+    {
+        cout<<"The Top in position : "<<length-1<<" : And the value is "<<top->item<<endl;
+    }
+    void print()
+    {
+        cout<<"The items in Stack are "<<endl;
+        Node *current=top;
+        while(current!=NULL)
+        {
+            cout<<current->item<<endl;
+            current=current->next;
+        }
+    }
+};
+int main()
+{
+
+    Stack <int>s;
+    s.push(15);
+    s.push(25);
+    s.push(35);
+    s.push(45);
+    s.pop();
+    s.getTop();
+    s.print();
+
+    return 0;
+}
+---------------------------------------------------------------------
+queue
+
+#include <iostream>
+using namespace std;
+template<class t>
+class queue
+{
+private:
+    int front;
+    int rear;
+    int length;
+    t *arr;
+    int arraySize;
+public:
+    queue(int size)
+    {
+        arraySize=size;
+        arr=new t[arraySize];
+        front=0;
+        rear=arraySize-1;
+        length=0;
+    }
+    bool isEmpty()
+    {
+        return length==0;
+    }
+    bool isFull()
+    {
+        return length==arraySize;
+    }
+    void enque(t element)
+    {
+        if(isFull())
+        {
+            cout<<"The queue is Full Can`t Insert Elements"<<endl;
+        }
+        else
+        {
+            rear=(rear+1)%arraySize;//0
+            arr[rear]=element;
+            length++;
+        }
+    }
+    void deque()
+    {
+        if(isEmpty())
+        {
+            cout<<"The queue is Empty Can`t Remove Elements"<<endl;
+        }
+        else
+        {
+            front=(front+1)%arraySize;
+            length--;
+        }
+    }
+    void getRear()
+    {
+        cout<<"The Rear is "<<arr[rear]<<endl;
+    }
+    void getFront()
+    {
+        cout<<"The Front is "<<arr[front]<<endl;
+    }
+    void print()
+    {
+        if(isEmpty())
+        {
+            cout<<"The queue is Empty Can`t Remove Elements"<<endl;
+        }
+        else
+        {
+            for(int i=front; i<=rear; i++)
+            {
+                cout<<arr[i]<<endl;
+            }
+        }
+    }
+    void print2()
+    {
+        if(isEmpty())
+        {
+            cout<<"The queue is Empty Can`t Remove Elements"<<endl;
+        }
+        else
+        {
+            for(int i=front; i!=rear; i=(i+1)%arraySize)
+            {
+                cout<<arr[i]<<endl;
+            }
+            cout<<arr[rear];
+        }
+    }
+    void Search(int element)
+    {
+        int position = -1;
+        if (isEmpty())
+        {
+            cout << "Queue is Empty"<<endl;
+        }
+        else
+        {
+            for (int i = front; i != rear; i = (i + 1) % arraySize)
+            {
+                if (arr[i] == element)
+                {
+                    position = i;
+                    cout<<"The Element Found in Queue in position :"<<position<<endl;
+                    break;
+                }
+            }
+            if (position == -1)
+            {
+                if (arr[rear] == element)
+                {
+                    position = rear;
+                    cout<<"The Element Found in Queue in position :"<<position<<endl;
+                    return;
+                }
+
+            }
+        }
+        if(position==-1)
+            cout<<"The Element not found in queue"<<endl;
+    }
+};
+int main()
+{
+    queue <int>q(8);
+    q.enque(4);
+    q.enque(5);
+    q.enque(7);
+    q.deque();
+    q.enque(15);
+    q.print();
+    return 0;
+}
+--------------------------------------------
+
+#include <iostream>
+using namespace std;
+template<class karim>
+class LinkedQueue
+{
+private:
+    struct Node
+    {
+        karim item;
+        Node *next;
+    };
+    Node *front,*rear;
+    int length;
+public:
+    LinkedQueue()
+    {
+        front=rear=NULL;
+        length=0;
+    }
+    bool isEmpty()
+    {
+        return length==0;
+    }
+    void enqueue(karim element)//5
+    {
+        Node*newNode=new Node;
+        newNode->item=element;
+        newNode->next=NULL;
+        if(isEmpty())
+        {
+            front=rear=newNode;
+        }
+        else
+        {
+            rear->next=newNode;
+            rear=newNode;
+        }
+        length++;
+    }
+    void dequeue()
+    {
+        if(isEmpty())
+        {
+            cout<<"queue is empty can`t remove elements"<<endl;
+        }
+        else
+        {
+            Node *temp=front;
+            front=front->next;
+            temp->next=NULL;
+            delete temp;
+            length--;
+        }
+    }
+    void clearAll()
+    {
+        front=rear=NULL;
+        cout<<"Queue is cleared"<<endl;
+    }
+    void clear()
+    {
+        Node *current;
+        while(front!=NULL)
+        {
+            current=front;
+            front=front->next;
+            current->next=NULL;
+            delete current;
+        }
+        rear=front;
+    }
+    void getFront()
+    {
+        cout<<front->item<<endl;
+    }
+    void getRear()
+    {
+        cout<<rear->item<<endl;
+    }
+    void print()
+    {
+        Node *current=front;
+        while(current!=NULL)
+        {
+            cout<<current->item<<endl;
+            current=current->next;
+        }
+    }
+};
+int main()
+{
+    LinkedQueue <double>l;
+    l.enqueue(10);
+    l.enqueue(20);
+    l.enqueue(30);
+    l.enqueue(40);
+    l.enqueue(50);
+    l.enqueue(60);
+    l.dequeue();
+    l.dequeue();
+    //l.clearAll();
+    l.print();
+    return 0;
+}
+-------------------------------------------------------------------
+//correct code to insert in binaryTree
+    void insert(int element)//35
+    {
+        Node *newNode=new Node;
+        newNode->item=element;
+        newNode->lift=newNode->right=NULL;
+        if(isEmpty())
+        {
+            root=newNode;
+        }
+        else
+        {
+            Node *current=root;
+            Node *prevese;
+            while(current!=NULL)
+            {
+                prevese=current;
+                if(element>=current->item)//50
+                {
+                    current=current->right;
+                }
+                else
+                {
+                    current=current->lift;
+                }
+            }
+            if(element>=prevese->item)//50
+            {
+                prevese->right=newNode;
+            }
+            else
+            {
+                prevese->lift=newNode;
+            }
+
+        }
+    }
+------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+class BinaryTree
+{
+private:
+    struct Node
+    {
+        int item;
+        Node *lift,*right;
+    };
+public:
+    Node *root;
+    BinaryTree()
+    {
+        root=NULL;
+    }
+    bool isEmpty()
+    {
+        return root==NULL;
+    }
+    void insert(int element)
+    {
+        Node *newNode= new Node;
+        newNode->item = element;
+        newNode->lift = NULL;
+        newNode->right = NULL;
+        if(root == NULL)
+        {
+            root = newNode;
+        }
+        else
+        {
+            Node *current=root;
+            Node *prevese;
+            while(current!=NULL)
+            {
+                prevese=current;
+                if(element <current->item)
+                {
+                    current = current->lift;
+                }
+                else
+                {
+                    current = current->right;
+                }
+            }
+            if(element>=prevese->item)//50
+            {
+                prevese->right=newNode;
+            }
+            else
+            {
+                prevese->lift=newNode;
+            }
+        }
+    }
+    void search(int element)
+    {
+        Node *current=root;
+        while(current!=NULL)
+        {
+            if(element==current->item)
+            {
+                cout<<"The Element Founded in Tree"<<endl;
+                return;
+            }
+            else if(element <current->item)
+            {
+                current = current->lift;
+            }
+            else
+            {
+                current = current->right;
+            }
+        }
+        cout<<"The Element Not Founded in Tree"<<endl;
+    }
+    void preOrder(Node *t)
+    {
+        if(t!=NULL)
+        {
+            cout<<t->item<<" ";
+            preOrder(t->lift);
+            preOrder(t->right);
+        }
+    }
+    void inOrder(Node *t)
+    {
+        if(t!=NULL)
+        {
+            inOrder(t->lift);
+            cout<<t->item<<" ";
+            inOrder(t->right);
+        }
+    }
+    void postOrder(Node *t)
+    {
+        if(t!=NULL)
+        {
+            postOrder(t->lift);
+            postOrder(t->right);
+            cout<<t->item<<" ";
+        }
+    }
+    void postOrderTravers()
+    {
+        postOrder(root);
+    }
+    void preOrderTravers()
+    {
+        preOrder(root);
+    }
+    void inOrderTravers()
+    {
+        inOrder(root);
+    }
+
+};
+int main()
+{
+    BinaryTree t;
+    t.insert(10);
+    t.insert(20);
+    t.insert(30);
+    t.insert(40);
+    t.insert(50);
+    t.insert(60);
+    t.inOrderTravers();
+    return 0;
+}

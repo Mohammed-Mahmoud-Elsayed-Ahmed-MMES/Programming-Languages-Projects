@@ -1,0 +1,130 @@
+# depslib dependency file v1.0
+1647114086 source:d:\c++\p1\main.cpp
+	<iostream>
+	"Contact.h"
+
+1647114369 source:d:\c++\p1\src\phone.cpp
+	"Phone.h"
+
+1647099346 d:\c++\p1\include\phone.h
+	<string>
+	<iostream>
+
+1647114369 source:d:\c++\p1\src\email.cpp
+	"Email.h"
+
+1647099782 d:\c++\p1\include\email.h
+	<string>
+	<iostream>
+
+1647114369 source:d:\c++\p1\src\address.cpp
+	"Address.h"
+
+1647100425 d:\c++\p1\include\address.h
+	<string>
+	<iostream>
+
+1647108817 source:d:\c++\p1\src\user.cpp
+	"User.h"
+
+1647104361 d:\c++\p1\include\user.h
+	<string>
+	<ctime>
+	<iostream>
+	"phone.h"
+	"email.h"
+	"address.h"
+
+1647111776 source:d:\c++\p1\src\contact.cpp
+	"Contact.h"
+
+1647109360 d:\c++\p1\include\contact.h
+	"User.h"
+	<string>
+
+1647114086 source:d:\c++ programs\p1\main.cpp
+	<iostream>
+	"Contact.h"
+
+1647109360 d:\c++ programs\p1\include\contact.h
+	"User.h"
+	<string>
+
+1647104361 d:\c++ programs\p1\include\user.h
+	<string>
+	<ctime>
+	<iostream>
+	"phone.h"
+	"email.h"
+	"address.h"
+
+1647099346 d:\c++ programs\p1\include\phone.h
+	<string>
+	<iostream>
+
+1647099782 d:\c++ programs\p1\include\email.h
+	<string>
+	<iostream>
+
+1647100425 d:\c++ programs\p1\include\address.h
+	<string>
+	<iostream>
+
+1647114369 source:d:\c++ programs\p1\src\address.cpp
+	"Address.h"
+
+1647111776 source:d:\c++ programs\p1\src\contact.cpp
+	"Contact.h"
+
+1647114369 source:d:\c++ programs\p1\src\email.cpp
+	"Email.h"
+
+1647114369 source:d:\c++ programs\p1\src\phone.cpp
+	"Phone.h"
+
+1647108817 source:d:\c++ programs\p1\src\user.cpp
+	"User.h"
+
+1647114086 source:d:\c++ programs\project 1\main.cpp
+	<iostream>
+	"Contact.h"
+
+1647109360 d:\c++ programs\project 1\include\contact.h
+	"User.h"
+	<string>
+
+1647104361 d:\c++ programs\project 1\include\user.h
+	<string>
+	<ctime>
+	<iostream>
+	"phone.h"
+	"email.h"
+	"address.h"
+
+1647099346 d:\c++ programs\project 1\include\phone.h
+	<string>
+	<iostream>
+
+1647099782 d:\c++ programs\project 1\include\email.h
+	<string>
+	<iostream>
+
+1647100425 d:\c++ programs\project 1\include\address.h
+	<string>
+	<iostream>
+
+1647114369 source:d:\c++ programs\project 1\src\address.cpp
+	"Address.h"
+
+1647111776 source:d:\c++ programs\project 1\src\contact.cpp
+	"Contact.h"
+
+1647114369 source:d:\c++ programs\project 1\src\email.cpp
+	"Email.h"
+
+1647114369 source:d:\c++ programs\project 1\src\phone.cpp
+	"Phone.h"
+
+1652131257 source:d:\c++ programs\project 1\src\user.cpp
+	"User.h"
+

@@ -1,0 +1,29 @@
+Order ID : 1
+Order Number : 22
+Order Date : 25
+Order Status : NEW
+Order Total : 100
+	Order Item : 
+Product ID : 1
+Product Name : MOUSE
+Product Number : 85
+Product Price : 100.000000
+Product Type : 23
+Sale Price : 120.000000
+Quantity : 5.000000
+
+
+Order ID : 2
+Order Number : 30
+Order Date : 32
+Order Status : NEW
+Order Total : 24000
+	Order Item : 
+Product ID : 2
+Product Name : LAPTOP
+Product Number : 85
+Product Price : 24000.000000
+Product Type : 1511
+Sale Price : 25000.000000
+Quantity : 3.000000
+

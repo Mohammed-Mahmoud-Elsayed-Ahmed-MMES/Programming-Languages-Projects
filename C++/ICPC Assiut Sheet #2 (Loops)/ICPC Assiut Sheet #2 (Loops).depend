@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1695556276 source:d:\c++ programs\icpc assiut sheet #2 (loops)\main.cpp
+	<iostream>
+	<string>
+	<cmath>
+	<cstring>
+	<algorithm>
+

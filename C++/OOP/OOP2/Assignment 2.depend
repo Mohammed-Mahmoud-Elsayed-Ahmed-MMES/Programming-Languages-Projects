@@ -1,0 +1,129 @@
+# depslib dependency file v1.0
+1652854209 source:d:\c++ programs\assignment 2\main.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<windows.h>
+	"Staff.h"
+	"Department.h"
+	"StaffMember.h"
+	"Employee.h"
+	"Volunteer.h"
+	"Salaried Employee.h"
+	"Hourly Employee.h"
+	"Commision Employee.h"
+	"Excutive Employee.h"
+	"Budget.h"
+	"Project.h"
+
+1652852104 source:d:\c++ programs\assignment 2\src\staffmember.cpp
+	"StaffMember.h"
+
+1652544989 d:\c++ programs\assignment 2\include\staffmember.h
+	<iostream>
+	<cmath>
+	<string>
+	<cstring>
+	<cstdlib>
+	"Department.h"
+
+1652469628 source:d:\c++ programs\assignment 2\src\department.cpp
+	"Department.h"
+
+1652469628 d:\c++ programs\assignment 2\include\department.h
+	<iostream>
+	<cmath>
+	<string>
+	<cstring>
+
+1652476802 source:d:\c++ programs\assignment 2\src\employee.cpp
+	"Employee.h"
+
+1652301079 d:\c++ programs\assignment 2\include\employee.h
+	<iostream>
+	<cmath>
+	<string>
+	"StaffMember.h"
+
+1652476802 source:d:\c++ programs\assignment 2\src\hourly employee.cpp
+	"Hourly Employee.h"
+
+1652457451 d:\c++ programs\assignment 2\include\hourly employee.h
+	<iostream>
+	<cmath>
+	<string>
+	"Employee.h"
+
+1652476802 source:d:\c++ programs\assignment 2\src\commision employee.cpp
+	"Commision Employee.h"
+
+1652457451 d:\c++ programs\assignment 2\include\commision employee.h
+	<iostream>
+	<cmath>
+	<string>
+	<cstring>
+	"Employee.h"
+
+1652476802 source:d:\c++ programs\assignment 2\src\excutive employee.cpp
+	"Excutive Employee.h"
+
+1652457451 d:\c++ programs\assignment 2\include\excutive employee.h
+	<iostream>
+	<cmath>
+	<string>
+	<cstring>
+	"Salaried Employee.h"
+
+1652457451 d:\c++ programs\assignment 2\include\salaried employee.h
+	<iostream>
+	<cmath>
+	<string>
+	"Employee.h"
+
+1652476802 source:d:\c++ programs\assignment 2\src\salaried employee.cpp
+	"Salaried Employee.h"
+
+1652553501 source:d:\c++ programs\assignment 2\src\staff.cpp
+	"Staff.h"
+
+1652541143 d:\c++ programs\assignment 2\include\staff.h
+	<iostream>
+	<cmath>
+	<string>
+	"StaffMember.h"
+	"Department.h"
+	"Volunteer.h"
+	"Commision Employee.h"
+	"Excutive Employee.h"
+	"Hourly Employee.h"
+	"Salaried Employee.h"
+
+1652845595 source:d:\c++ programs\assignment 2\src\budget.cpp
+	"Budget.h"
+
+1652845595 d:\c++ programs\assignment 2\include\budget.h
+	<iostream>
+	<cmath>
+	<string>
+
+1652848532 source:d:\c++ programs\assignment 2\src\project.cpp
+	"Project.h"
+
+1652841802 d:\c++ programs\assignment 2\include\project.h
+	<iostream>
+	<cmath>
+	<string>
+	"Employee.h"
+	"StaffMember.h"
+	"Budget.h"
+
+1652476715 source:d:\c++ programs\assignment 2\src\volunteer.cpp
+	"Volunteer.h"
+
+1652476232 d:\c++ programs\assignment 2\include\volunteer.h
+	<iostream>
+	<cmath>
+	<string>
+	<cstdlib>
+	"StaffMember.h"
+
