@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1679435413 source:d:\c++ programs\breadth first search\main.cpp
+	<iostream>
+	<queue>
+	<vector>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1679441082 source:d:\c++ programs\dynamice vacuum cleaner\main.cpp
+	<iostream>
+	<vector>
+	<stdlib.h>
+	<conio.h>
+

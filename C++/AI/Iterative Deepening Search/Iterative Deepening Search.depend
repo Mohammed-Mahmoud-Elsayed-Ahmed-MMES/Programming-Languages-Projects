@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1681529955 source:d:\c++ programs\iterative deepening search\main.cpp
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+
