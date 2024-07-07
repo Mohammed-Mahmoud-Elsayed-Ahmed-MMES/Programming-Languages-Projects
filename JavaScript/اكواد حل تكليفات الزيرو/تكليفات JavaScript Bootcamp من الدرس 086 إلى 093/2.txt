@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
+---------------------------------------------
+let image = document.images;
+for (var i = 0; i < image.length; i++)
+{
+    image[i].src = "https://elzero.org/wp-content/themes/elzero/imgs/logo.png";
+    image[i].alt = "Elzer Logo";
+    image[i].style = "background-color : blue; padding : 30px; margin-bottom: 10px";
+}

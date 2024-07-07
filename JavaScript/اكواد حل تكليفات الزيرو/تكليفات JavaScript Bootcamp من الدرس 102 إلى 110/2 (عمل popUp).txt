@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <script src="main.js"></script>
+  </body>
+</html>
+//<button onclick="createPopup()">Open popup</button>
+---------------------------------------------------
+function createPopup() {
+    // Create a new div element
+    const popup = document.createElement('div');
+
+    // Set the div element's style
+    popup.style.position="relative" ;
+    popup.style.width = '500px';
+    popup.style.height = '200px';
+    popup.style.backgroundColor = 'lightGray';
+    popup.style.border = '1px solid black';
+
+    // Add a title to the div element
+    const title = document.createElement('h1');
+    title.style.position="absolute" ;
+    title.textContent = 'Welcome';
+    title.style.fontSize = "30px";
+    title.style.right = "40%";
+    popup.appendChild(title);
+
+    // Add a message to the div element
+    const message = document.createElement('p');
+    message.textContent = 'Welcome To Elzero Web School';
+    message.style.fontSize = "20px";
+    message.style.position="absolute" ;
+    message.style.right = "23%";
+    message.style.top = "40%";
+    //message.style.width = "50px";
+    popup.appendChild(message);
+
+    // Add a button to the div element
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'X';
+    closeButton.style.color = 'white';
+    closeButton.style.backgroundColor = 'red';
+    closeButton.style.borderRadius = "70%";
+    closeButton.style.position="absolute" ;
+    closeButton.style.top = "-5%" ;
+    closeButton.style.right = "-2%" ;
+    closeButton.addEventListener('click', () => {
+        popup.remove();
+    });
+    popup.appendChild(closeButton);
+
+    // Append the div element to the body element
+    document.body.appendChild(popup);
+}
+createPopup();
+//setTimeout(createPopup,3000);

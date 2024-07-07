@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <h1 id="el">Elzero</h1>
+    <script src="main.js"></script>
+  </body>
+</html>
+------------------------------------------------------------
+document.querySelector("h1").style.color = "blue";
+document.querySelector("h1").style.fontSize = "80px";
+document.querySelector("h1").style.fontWeight = "bold";
+document.querySelector("h1").style.textAlign = "center";
+document.querySelector("h1").style.fontFamily = "Arial";
+/* 
+// does not work to get the from html file and style it and i do not know why
+document.getElementById("el").style.fontFamily = "Arial";
+*/

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <div>Element</div>
+    <span>Element</span>
+    <p>Element</p>
+    <article>Element</article>
+    <section>Element</section>
+    <script src="main.js"></script>
+  </body>
+</html>
+---------------------------------------------
+let div = document.querySelector('div');
+let span = document.querySelector('span');
+let p = document.querySelector('p');
+let article = document.querySelector('article');
+let section = document.querySelector('section');
+
+div.addEventListener('click', handleClick);
+span.addEventListener('click', handleClick);
+p.addEventListener('click', handleClick);
+article.addEventListener('click', handleClick);
+section.addEventListener('click', handleClick);
+
+function handleClick(event) {
+    const element = event.target;
+    const elementType = element.localName;
+    console.log(`This Is ${elementType}`);
+}

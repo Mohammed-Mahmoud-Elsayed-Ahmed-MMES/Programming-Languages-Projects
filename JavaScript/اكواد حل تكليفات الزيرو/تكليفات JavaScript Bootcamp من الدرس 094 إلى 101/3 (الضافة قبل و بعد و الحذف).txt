@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <div class="our-element">Our Element</div>
+    <p>Paragraph</p>
+    <script src="main.js"></script>
+  </body>
+</html>
+------------------------------------------
+let paragraphs = document.querySelectorAll('p');
+let existClass = document.querySelector(".our-element");
+
+console.log(paragraphs);
+console.log(existClass);
+
+// Loop through all paragraphs
+for (const paragraph of paragraphs) {
+    // Check if the paragraph has no class name or id
+    if (!paragraph.classList.length && !paragraph.id) {
+    // Remove the paragraph from the DOM
+    paragraph.remove();
+    }
+}
+let createDivBefore = document.createElement("div");
+createDivBefore.className = 'start';
+createDivBefore.title = 'Start Element';
+createDivBefore.textContent = 'Start';
+createDivBefore.setAttribute('data-value', 'End');
+existClass.before(createDivBefore);
+
+let createDivAfter = document.createElement("div");
+createDivAfter.className = 'end';
+createDivAfter.title = 'End Element';
+createDivAfter.textContent = 'End';
+createDivAfter.setAttribute('data-value', 'End');
+existClass.after(createDivAfter);

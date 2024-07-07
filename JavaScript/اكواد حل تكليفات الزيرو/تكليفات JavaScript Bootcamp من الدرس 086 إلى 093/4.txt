@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <div class="one" title="two">Two</div>
+    <div class="two" title="one">One</div>
+    <script src="main.js"></script>
+  </body>
+</html>
+-------------------------------------
+let cl1 = document.querySelector(".one");
+let cl2 = document.querySelector(".two");
+console.log(cl1);
+
+cl1.title = cl1.className;
+cl2.title = cl2.className;
+
+cl1.textContent = cl2.textContent;
+cl2.textContent = cl2.className + " " +cl2.attributes.length;

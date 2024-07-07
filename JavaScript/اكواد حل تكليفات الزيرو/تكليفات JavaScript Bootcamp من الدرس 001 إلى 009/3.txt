@@ -1,0 +1,4 @@
+/* Notice : %c => he %c symbol in JavaScript is used to format the output of the console.log() method. The %c specifier takes two arguments: the first argument is the CSS style for the text, and the second argument is the text that you want to print.
+In the code you provided, the %c specifier is used to format the output of the console.log() method, making the text red, green, and white, respectively.*/
+
+console.log("%cElzero %cWeb %cSchool","color: red; font-size: 40px;","color: green; font-size: 40px; font-weight: bold;","color: white; font-size: 40px; background-color: blue;");

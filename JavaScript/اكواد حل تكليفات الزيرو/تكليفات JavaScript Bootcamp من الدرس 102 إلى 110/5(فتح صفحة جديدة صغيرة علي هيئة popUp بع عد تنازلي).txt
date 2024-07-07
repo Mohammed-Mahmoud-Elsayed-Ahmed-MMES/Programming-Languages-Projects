@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <div>10</div>
+    <script src="main.js"></script>
+  </body>
+</html>
+----------------------------------------------
+let div = document.querySelector("div");
+function countDown()
+{
+    div.innerHTML -=1;
+    if(div.innerHTML == 5)
+    {
+        window.open("https://google.com", "_blank", "width=400,height=400,left=200,top=10");
+    }else if(div.innerHTML == 0)
+    {
+        clearInterval(counter); //stop the timer when it reaches zero
+    }
+}
+let counter = setInterval(countDown,1000)

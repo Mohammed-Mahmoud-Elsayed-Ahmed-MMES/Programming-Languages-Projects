@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+  </head>
+  <body>
+    <img decoding="async" src="#" alt="One" />
+    <img decoding="async" src="#" />
+    <img decoding="async" src="#" alt="Three" />
+    <img decoding="async" src="#" />
+    <img decoding="async" src="#" />
+    <script src="main.js"></script>
+  </body>
+</html>
+-----------------------------------
+let image = document.images;
+for (let i=0; i < image.length;i++)
+{
+    if(image[i].hasAttribute("alt"))
+    {
+        image[i].alt = "Old";
+    }else{
+        image[i].alt = "Elzero New";
+    }
+}

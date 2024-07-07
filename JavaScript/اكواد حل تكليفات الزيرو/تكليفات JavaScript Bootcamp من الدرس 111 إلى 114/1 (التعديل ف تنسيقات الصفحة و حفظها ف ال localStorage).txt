@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body>
+    <select name="fontName" id="fn">
+      <option value="Open-sans">Open</option>
+      <option value="Cairo-sans">Cairo</option>
+      <option value="Roboto">Roboto</option>
+    </select>
+    <select name="fontColor" id="fc">
+      <option value="Red">Red</option>
+      <option value="Blue">Blue</option>
+      <option value="Black">Black</option>
+      <option value="White">White</option>
+      <option value="Green">Green</option>
+      <option value="Yellow">Yellow</option>
+    </select>
+    <select name="fontSize" id="fs">
+      <option value="16px">16</option>
+      <option value="18px">18</option>
+      <option value="20px">20</option>
+      <option value="22px">22</option>
+      <option value="24px">24</option>
+      <option value="26px">26</option>
+      <option value="28px">28</option>
+      <option value="30px">30</option>
+    </select>
+    <div class="a">Mohamed Mahmoud Seleem</div>
+    <script src="main.js"></script>
+  </body>
+</html>
+--------------------------------------------------
+let fn = document.querySelector("#fn");
+let fc = document.querySelector("#fc");
+let fs = document.querySelector("#fs");
+let a = document.querySelector(".a");
+
+fn.onchange = function()
+{
+    window.localStorage.setItem("fontFamily" , fn.value);
+    document.body.style.fontFamily = fn.value;
+}
+fc.onchange = function()
+{
+    window.localStorage.setItem("fontColor" , fc.value);
+    document.body.style.color = fc.value;
+}
+fs.onchange = function()
+{
+    window.localStorage.setItem("fontSize" , fs.value);
+    document.body.style.fontSize = fs.value;
+}
+document.body.style.fontFamily = window.localStorage.getItem("fontFamily" , fn.value);
+document.body.style.color = window.localStorage.getItem("fontColor" , fc.value);
+document.body.style.fontSize = window.localStorage.getItem("fontSize" , fs.value);
+
+fn.value = window.localStorage.getItem("fontFamily" , fn.value);
+fc.value = window.localStorage.getItem("fontColor" , fc.value);
+fs.value = window.localStorage.getItem("fontSize" , fs.value);

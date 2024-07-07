@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body>
+    <form action="">
+      <input id="one" type="text" placeholder="Enter First Name">
+      <input id="two" type="text" placeholder="Enter Last Name">
+      <input id="three" type="text" placeholder="Enter Your Phone">
+      <select name="" id="select">
+        <option value="one">one</option>
+        <option value="two">two</option>
+        <option value="three">three</option>
+        <option value="four">four</option>
+        <option value="five">five</option>
+      </select>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
+-----------------------------------------------------
+let fn = document.querySelector("#one");
+let ln = document.querySelector("#two");
+let ph = document.querySelector("#three");
+
+let select = document.querySelector("#select");
+
+fn.oninput = function()
+{
+    window.sessionStorage.setItem("First Name" , fn.value);
+}
+ln.oninput = function()
+{
+    window.sessionStorage.setItem("Last Name" , ln.value);
+}  
+ph.oninput = function()
+{
+    window.sessionStorage.setItem("Phone" , ph.value);
+}
+select.onchange = function()
+{
+    window.sessionStorage.setItem("number" , select.value);
+}
+
+fn.value = window.sessionStorage.getItem("First Name");
+ln.value = window.sessionStorage.getItem("Last Name");
+ph.value = window.sessionStorage.getItem("Phone");
+select.value = window.sessionStorage.getItem("number");

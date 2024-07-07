@@ -1,0 +1,62 @@
+/* First
+let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
+let mix1 = mix.map(function(ele)
+{
+    return isNaN(parseInt(ele)) ? ele : "" ;
+}).reduce(function(acc,current)
+{
+    return acc + current;
+})
+console.log(mix1); // Elzero
+*/
+/* Second
+let myString = "EElllzzzzzzzeroo";
+let newMyString = myString.split("").filter(function(ele,index)
+{
+    return myString.indexOf(ele) === index;
+}) 
+//console.log(newMyString); // (6) ['E', 'l', 'z', 'e', 'r', 'o']
+.reduce(function(acc,current)
+{
+    return acc + current;
+})
+console.log(newMyString); // Elzero
+*/
+/* Third
+let myArray = ["E", "l", "z", ["e", "r"] , "o"];
+let newMyArray = myArray.reduce(function(acc,current)
+{
+    return acc + current;
+}).split("").filter(function(ele)
+{
+    return ele !== ",";
+}).reduce(function(acc,current)
+{
+    return acc + current;
+})
+console.log(newMyArray); // Elzero
+*/
+/* Fourth
+let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
+let newNumsAndStrings = numsAndStrings.filter(function(ele)
+{
+    return !isNaN(parseInt(ele)) ? ele : "" ;
+}).map(function(ele)
+{
+    return -ele;
+})
+console.log(newNumsAndStrings);// [-1, -10, 10, 20, -5, -3]
+*/
+/* Fifth
+let nums = [2, 12, 11, 5, 10, 1, 99];
+let newNums = nums.reduce(function(acc,current)
+{
+    if(current%2!=0)
+    {
+        return acc + current;
+    }else{
+        return acc * current;
+    }
+},1)
+console.log(newNums);// 500
+*/

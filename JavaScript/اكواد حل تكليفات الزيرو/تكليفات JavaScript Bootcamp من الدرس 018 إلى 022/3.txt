@@ -1,0 +1,16 @@
+let num1 = "10";
+
+// Solution One
+console.log(+num1 + +num1); // 20
+
+// Solution Two
+console.log(+num1 + --num1 + --num1 - --num1 ); // 20
+// 10 + 9 + 8 - 7
+
+// Solution Three
+console.log(--num1 * --num1 - +num1 - +num1); // 20
+// 6 * 5 - 5 - 5
+
+// Solution Four
+console.log(num1 * num1 - num1); // 20
+// 5 * 5 - 5

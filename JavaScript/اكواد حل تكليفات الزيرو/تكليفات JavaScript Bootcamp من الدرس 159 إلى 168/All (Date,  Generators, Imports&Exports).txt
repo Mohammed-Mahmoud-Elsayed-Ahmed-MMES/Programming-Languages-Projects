@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <script src="mod-one.js"></script>
+    <script src="mod-two.js"></script>
+  </body>
+</html>
+------------------------------------------------------
+/* One Calculate your age
+let date = new Date();
+let myBirthDay = new Date("Oct 9 2003");
+let difference = date - myBirthDay;
+console.log(`${(difference / 1000).toFixed()} Seconds`);
+console.log(`${(difference / 1000 / 60).toFixed()} Minutes`);
+console.log(`${(difference / 1000 / 60 / 60).toFixed()} Hours`);
+console.log(`${(difference / 1000 / 60 / 60 / 24).toFixed()} Days`);
+console.log(`${(difference / 1000 / 60 / 60 / 24 / 30).toFixed()} Months`);
+console.log(`${(difference / 1000 / 60 / 60 / 24 / 365).toFixed()} Years`);
+// 624994095 Seconds
+10416568 Minutes
+173609 Hours
+7234 Days
+241 Months
+20 Years
+*/
+
+/* Two Edite current time
+let date = new Date();
+date.setTime(0);
+date.setFullYear(1980);
+date.setHours(0);
+date.setSeconds(1);
+console.log(date);
+// Needed Output
+"Tue Jan 01 1980 00:00:01 GMT+0200 (Eastern European Standard Time)"
+*/
+
+
+/* Three
+let date = new Date();
+date.setDate(0);
+console.log(date);
+date.setDate(60);
+console.log(`Previous Month Is ${date.getMonth()==6?"Jun":"Unknown"} And Last Day Is ${date.getDate()}`);
+
+// Second Way
+let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Oct","Nov","Dec"];
+let date1 = new Date();
+date1.setDate(0);
+console.log(date1);
+console.log(`Previous Month Is ${months[date1.getMonth()]} And Last Day Is ${date1.getDate()}`);
+*/
+
+/* Four
+let date1 = new Date("2023 07 29");
+console.log(date1);
+let date2 = new Date("07/29/2023");
+console.log(date2);
+let date3 = new Date("07-29-2023");
+console.log(date3);
+*/
+
+/* Five
+let start = performance.now();
+// Operation
+for (let i = 0; i < 100000; i++) {
+    document.write(`<div>${i}</div>`);
+    //let div = document.createElement("div");
+    //div.appendChild(document.createTextNode(i));
+    //document.body.appendChild(div);
+}
+// Time End
+let end = performance.now();
+// Operation Duration
+let duration = end - start;
+console.log(`"Loop Took ${Math.trunc(duration)} Milliseconds."`);
+*/
+
+/* Six
+function* gen()
+{
+    let index = 14;
+    let num = 140;
+    let sum = index + num;
+    yield index;
+    while(true)
+    {
+        yield sum;
+        sum += num += 200;
+    }
+}
+
+let generator = gen();
+
+console.log(generator.next()); // {value: 14, done: false}
+console.log(generator.next()); // {value: 154, done: false}
+console.log(generator.next()); // {value: 494, done: false}
+console.log(generator.next()); // {value: 1034, done: false}
+console.log(generator.next()); // {value: 1774, done: false}
+console.log(generator.next()); // {value: 2714, done: false}
+console.log(generator.next()); // {value: 3854, done: false}
+console.log(generator.next()); // {value: 5194, done: false}
+console.log(generator.next()); // {value: 6734, done: false}
+*/
+
+/* Seven
+function* genNumbers() {
+    yield* [1, 2, 2, 2, 3, 4, 5];
+}
+function* genLetters() {
+    yield* ["A", "B", "B", "B", "C", "D"];
+}
+
+function* genAll() {
+    yield* new Set(genNumbers());
+    yield* new Set(genLetters());
+}
+
+let generator = genAll();
+
+  console.log(generator.next()); // {value: 1, done: false}
+  console.log(generator.next()); // {value: 2, done: false}
+  console.log(generator.next()); // {value: 3, done: false}
+  console.log(generator.next()); // {value: 4, done: false}
+  console.log(generator.next()); // {value: 5, done: false}
+  console.log(generator.next()); // {value: "A", done: false}
+  console.log(generator.next()); // {value: "B", done: false}
+  console.log(generator.next()); // {value: "C", done: false}
+  console.log(generator.next()); // {value: "D", done: false}
+*/
+
+/* Eight
+import calc from "./mod-one.js";
+import * as modOne from "./mod-two.js";
+// main.js File
+console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree)); // 60
+*/
+-------------------------------------------------
+/* Eight part contiued from mod-one.js
+export default function(num1, num2, num3){
+    return num1 + num2 + num3;
+};
+*/
+-----------------------------------------------
+/* Eight part contiued from mod-two.js
+// mod-two.js File
+let a = 10; // Do Not Edit Names
+let b = 20; // Do Not Edit Names
+let c = 30; // Do Not Edit Names
+
+export { a as numOne, b as numTwo, c as numThree};
+*/

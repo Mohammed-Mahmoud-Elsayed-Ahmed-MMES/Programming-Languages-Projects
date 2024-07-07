@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body>
+    <script src="main.js"></script>
+  </body>
+</html>
+--------------------------------------------------
+/* One
+let setOfNumbers = new Set([10]);
+setOfNumbers.add(20).add(setOfNumbers.size);
+
+console.log(setOfNumbers);
+console.log(Array.from(setOfNumbers)[2]);
+*/
+
+/* Two
+let myFriends = ["Osama", "Ahmed", "Sayed", "Sayed", "Mahmoud", "Osama"];
+let newMyFriends = new Set(myFriends.sort());
+console.log(newMyFriends);
+// Needed Output
+// (4) ['Ahmed', 'Mahmoud', 'Osama', 'Sayed']
+*/
+
+/* Three
+let myInfo = {
+    username: "Osama",
+    role: "Admin",
+    country: "Egypt",
+};
+let myNewMap = new Map();
+myNewMap.set("username", "Osama");
+myNewMap.set("role", "Admin");
+myNewMap.set("country", "Egypt");
+// The foour phrases above can be easier with let myNewMap = new Map(Object.enteries(myInfo));
+
+console.log(myNewMap);
+console.log(myNewMap.size);
+console.log(myNewMap.has("role"));
+*/
+
+/* Four
+let theNumber = 100020003000;
+
+console.log(+[...new Set(theNumber.toString())].sort().slice(true).join("")); // 123
+*/
+
+/* Five
+let theName = "Elzero";
+
+console.log(theName.split(""));
+console.log([...theName]);
+console.log([...new Set(theName)]);
+console.log(Object.assign([],theName));
+console.log(Array.from(theName));
+
+// Needed Output
+// ['E', 'l', 'z', 'e', 'r', 'o']
+*/
+
+/* Six
+// let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
+// chars.sort().copyWithin(0,3,6);
+// console.log(chars);
+
+// Needed Output
+// ['A', 'B', 'C', 'A', 'B', 'C', 'D', 'E']
+
+// let chars = ["A", "B", "C", 20, "D", "E", 10, 15, 6];
+// chars.sort().copyWithin(0,4,8);
+// console.log(chars);
+
+// Needed Output
+// ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'E']
+
+// let chars = ["Z", "Y", "A", "D", "E", 10, 1];
+
+// chars.copyWithin(2);
+// console.log(chars);
+
+// Needed Output
+// ["Z", "Y", "Z", "Y", "A", "D", "E"]
+*/
+
+/* seven
+let numsOne = [1, 2, 3];
+let numsTwo = [4, 5, 6];
+
+let arr = [] ;
+arr = [...numsOne,...numsTwo] ;
+console.log(arr);
+
+arr = numsOne.concat(numsTwo);
+console.log(arr);
+
+numsOne.push(...numsTwo);
+console.log(numsOne);
+// Needed Output
+[1, 2, 3, 4, 5, 6]
+*/
+
+/* Eight
+let n1 = [10, 30, 10, 20];
+let n2 = [30, 20, 10];
+
+console.log(Number(Math.max(...n1)) * (n1.concat(n2)).length);
+
+// Needed Output
+210
+*/

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body>
+    <script src="main.js"></script>
+  </body>
+</html>
+---------------------------------------------------
+/*One
+let myNumbers = [1, 2, 3, 4, 5];
+
+let [a, , , ,e] = myNumbers;
+
+console.log(a * e); // 5
+*/
+
+/*Two
+let mySkills = ["HTML", "CSS", "JavaScript", ["PHP", "Python", ["Django", "Laravel"]]];
+
+let [a, b, c, [d,e,[f,g]]] = mySkills;
+
+console.log(`My Skills: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}`);
+
+// My Skills: HTML, CSS, JavaScript, PHP, Python, Django, Laravel*/
+
+/*Three
+let arr1 = ["Ahmed", "Sameh", "Sayed"];
+let arr2 = ["Mohamed", "Gamal", "Amir"];
+let arr3 = ["Haytham", "Shady", "Mahmoud"];
+
+let arr = arr1.concat(arr2,arr3);
+console.log(arr); 
+let [c, , , , , , ,a,b] = arr;
+
+console.log(`My Best Friends: ${a}, ${b}, ${c}`);
+
+// My Best Friends: Shady, Mahmoud, Ahmed
+*/
+
+/* Four
+const member = {
+    age: 30,
+    working: false,
+    country: "Egypt",
+    hobbies: ["Reading", "Swimming", "Programming"],
+};
+
+const {age: a,working: w,country: c,hobbies:[h1,,h3]} = member;
+console.log(`My Age Is ${a} And Iam ${w ? "" : "Not"} Working`);
+  // My Age Is 30 And Iam Not Working
+console.log(`I Live in ${c}`);
+  // I Live in Egypt
+console.log(`My Hobbies: ${h1} And ${h3}`);
+  // My Hobbies: Reading And Programming
+*/
+
+/* Five
+const game = {
+    title: "YS",
+    developer: "Falcom",
+    releases: {
+        "Oath In Felghana": ["USA", "Japan"],
+        "Ark Of Napishtim": {
+        US: "20 USD",
+        JAP: "10 USD",
+        },
+        Origin: "30 USD",
+    },
+};
+
+const {title: t,developer: d,releases} = game;
+const [o, a] = Object.keys(releases);
+const [[u, j],{US: u_price, JAP: j_price}, or] = Object.values(releases);
+
+console.log(`My Favourite Games Style Is ${t} Style`);
+  // My Favourite Games Style Is YS Style
+console.log(`And I Love ${d} Games`);
+  // And I Love Falcom Games
+console.log(`My Best Release Is ${o} It Released in ${u} & ${j}`);
+  // My Best Release Is Oath In Felghana It Released in USA & Japan
+console.log(`Although I Love ${a}`);
+  // Although I Love Ark Of Napishtim
+console.log(`${a} Price in USA Is ${u_price}`);
+  // Ark Of Napishtim Price in USA Is 20 USD
+console.log(`${a} Price in Japan Is ${j_price}`);
+  // Ark Of Napishtim Price in Japan Is 10 USD
+console.log(`Origin Price Is ${or}`);
+  // Origin Price Is 30 USD
+*/
+
+/* Six
+let chosen = 1;
+
+let myFriends = [
+    { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+    { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+    { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+];
+
+const [{title:t ,age: ag ,available: av ,skills: s},
+    {title:t1 ,age: ag1 ,available: av1 ,skills: s1},
+    {title:t2 ,age: ag2 ,available: av2 ,skills: s2},
+] = myFriends;
+const [h,c] = Object.values(s);
+const [py,dj] = Object.values(s1);
+const [ph,la] = Object.values(s2);
+
+if (chosen == 1) 
+{
+    console.log(t);
+    console.log(ag);
+    console.log(av ? "Available":"Not Available");
+    console.log(c);
+}else if (chosen == 2) 
+{
+    console.log(t1);
+    console.log(ag1);
+    console.log(av1 ? "Available":"Not Available");
+    console.log(c1);
+}else if (chosen == 3) 
+{
+    console.log(t2);
+    console.log(ag2);
+    console.log(av2 ? "Available":"Not Available");
+    console.log(c2);
+} 
+// If chosen === 1
+
+"Osama"
+39
+"Available"
+"CSS"
+
+// If chosen === 2
+
+"Ahmed"
+25
+"Not Available"
+"Django"
+
+// If chosen === 3
+
+"Sayed"
+33
+"Available"
+"Laravel"
+*/
